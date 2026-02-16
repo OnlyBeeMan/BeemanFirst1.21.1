@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "beeman_first:block/weird_tall_grass_bottom"
+  }
+}

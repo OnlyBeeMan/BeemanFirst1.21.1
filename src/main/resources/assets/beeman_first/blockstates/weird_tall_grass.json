@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=upper": { "model": "beeman_first:block/weird_tall_grass_top" },
+    "half=lower": { "model": "beeman_first:block/weird_tall_grass_bottom" }
+  }
+}

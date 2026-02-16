@@ -8,6 +8,7 @@ import net.minecraft.client.render.RenderLayer;
 public class BeemanFirstClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WEIRD_TALL_GRASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WEIRD_GRASS, RenderLayer.getCutout());
 
     }
