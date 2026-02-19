@@ -6,12 +6,17 @@ import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 
 public class ModBlocks {
 
@@ -20,12 +25,7 @@ public class ModBlocks {
             new WeirdGrassBlock(AbstractBlock.Settings.copy(Blocks.SHORT_GRASS).nonOpaque().noCollision()));
 
     public static final Block WEIRD_TALL_GRASS = registerBlock("weird_tall_grass",
-            new TallPlantBlock(AbstractBlock.Settings.copy(Blocks.TALL_GRASS).nonOpaque().noCollision()){
-                @Override
-                protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-                    return floor.isIn(BlockTags.DIRT) || floor.isOf(Blocks.FARMLAND) || floor.isIn(BlockTags.SOUL_SPEED_BLOCKS);
-                }
-            });
+            new WeirdTallGrassBlock(AbstractBlock.Settings.copy(Blocks.TALL_GRASS).nonOpaque().noCollision()));
 
 
     private static Block registerBlock(String name, Block block){

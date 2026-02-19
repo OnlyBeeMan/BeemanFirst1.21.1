@@ -2,6 +2,7 @@ package net.beeman.beemanfirst;
 
 import net.beeman.beemanfirst.block.ModBlocks;
 import net.beeman.beemanfirst.item.ModItems;
+import net.beeman.beemanfirst.world.gen.ModDimensions;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -25,6 +26,7 @@ public class BeemanFirst implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModDimensions.registerModDimensions();
 
 		LOGGER.info("Hello Fabric world!");
 	}
